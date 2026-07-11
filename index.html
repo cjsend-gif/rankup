@@ -885,6 +885,38 @@ footer{
 <body>
 
 
+<!-- 기사 모집 팝업 -->
+
+<div class="recruit-popup" id="recruitPopup">
+
+    <button class="popup-close" onclick="closeRecruit()">
+        ✕
+    </button>
+
+
+    <div class="popup-icon">
+        🎮
+    </div>
+
+
+    <h2>
+        RANKUP 기사 모집
+    </h2>
+
+
+    <p>
+        실력 있는 플레이어를 모집합니다.<br>
+        함께 성장할 전문 기사를 기다립니다.
+    </p>
+
+
+    <a href="https://open.kakao.com/o/xxxxxxx">
+        기사 지원하기
+    </a>
+
+
+</div>    
+
 <header>
 
 <div class="logo">
@@ -1563,6 +1595,262 @@ RANKUP GAME SERVICE
 <style>
 
 
+/* =====================
+RECRUIT POPUP
+===================== */
+
+
+.recruit-popup{
+
+
+position:fixed;
+
+
+top:50%;
+
+left:50%;
+
+
+transform:
+
+translate(-50%,-50%);
+
+
+
+width:360px;
+
+
+
+padding:35px;
+
+
+
+background:
+
+
+linear-gradient(
+
+145deg,
+
+#171722,
+
+#09090f
+
+);
+
+
+
+border-radius:30px;
+
+
+
+border:
+
+1px solid rgba(139,92,246,.5);
+
+
+
+box-shadow:
+
+
+0 30px 100px rgba(0,0,0,.7);
+
+
+
+z-index:9999;
+
+
+
+text-align:center;
+
+
+
+animation:
+
+popupShow .5s ease;
+
+
+}
+
+
+
+.popup-icon{
+
+
+font-size:45px;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.recruit-popup h2{
+
+
+font-size:28px;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.recruit-popup p{
+
+
+color:#aaa;
+
+
+line-height:1.7;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.recruit-popup a{
+
+
+display:block;
+
+
+padding:15px;
+
+
+
+border-radius:15px;
+
+
+
+background:
+
+
+linear-gradient(
+
+90deg,
+
+#8b5cf6,
+
+#3b82f6
+
+);
+
+
+
+font-weight:900;
+
+
+}
+
+
+
+.popup-close{
+
+
+position:absolute;
+
+
+right:18px;
+
+
+top:15px;
+
+
+
+border:none;
+
+
+background:none;
+
+
+color:#aaa;
+
+
+
+font-size:22px;
+
+
+
+cursor:pointer;
+
+
+}
+
+
+
+.popup-close:hover{
+
+
+color:white;
+
+
+}
+
+
+
+@keyframes popupShow{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+translate(-50%,-45%);
+
+
+}
+
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+translate(-50%,-50%);
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:500px){
+
+
+.recruit-popup{
+
+
+width:90%;
+
+
+padding:30px 20px;
+
+
+}
+
+
+}    
+
 @media(max-width:900px){
 
 
@@ -1626,6 +1914,16 @@ grid-template-columns:1fr;
 </style>
 
 
+<script>
+
+function closeRecruit(){
+
+document.getElementById("recruitPopup").style.display="none";
+
+}
+
+</script>
+    
 
 </body>
 
